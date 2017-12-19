@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .edit, .editing{
+            margin:10px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            var i = 1;
+            $("div.edit").on("click",function(){
+
+                var text = $(this).text();
+                if($(this).is(".edit")){
+                    var name = $(this).attr('class');
+                    name = name.replace(/edit/, '');
+                    name = name.replace(/[ ]+/, '');
+                    $(this).html("<input id='inp"+ i +"' name='"+name+"' type='text' value='"+text+"'>");
+                    $(this).removeClass("edit");
+                    $(this).addClass("editing");
+                    i++;
+                }else{
+                    //console.log("false");
+                }
+            });
+            $("#save").on("click", function(){
+                var row = $(".editing");
+                var test = row.find("input");
+                console.log(test);
+                $.each(test, function (index, value) {
+                    var myVar = $(value).val();
+                    var name = $(value).attr("name");
+                    $.ajax({
+                        type: "POST",
+                        url: 'ajax/test.php',
+                        data: "fild="+name+"&value="+myVar,
+                        success: function(){
+                            $(this).text(myVar);
+                        }
+                    });
+                });
+            });
+
+            /*Чтение содержимого из файла и добавление на странице*/
+            $.ajax({
+                type: "POST",
+                url: 'ajax/read.php',
+                data: "",
+                success: function(data){
+                    $(".title").text(data);
+                }
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <button id="save">Сохранить</button>
+</div>
+<br>
+<div id="test"></div><br>
+<div class="edit title">text specialddddddddddddddddddddddddddddddddddddddddddddddd for edit!</div>
+
+
+
+
+</body>
+</html>
