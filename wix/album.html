@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WIX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|EB+Garamond" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="mobile"></div>
+    <div class="container">
+        <ul class="menu__main">
+            <li><a href="index.html" class="menu__main-link">Home</a></li>
+            <li><a href="index.html#about" class="menu__main-link">About</a></li>
+            <li><a href="index.html#portfolio" class="menu__main-link">Portfolio</a></li>
+            <li><a href="index.html#contact" class="menu__main-link">Contact</a></li>
+            <li><a href="album.html" class="menu__main-link active">Albums</a></li>
+
+        </ul>
+    </div>
+</header>
+
+<section class="album">
+    <div class="container">
+        <h2 class="second-title">Client Albums</h2>
+        <div class="line"></div>
+        <div class="album__text">Impress your clients by easily creating an album site that they'll love.</div>
+        <div class="album__grid">
+            <div class="album__grid-cel">
+                <div class="album__grid-img">
+                    <a href="/img/photo/1.jpg" data-fancybox="first-album">
+                        <div class="img" style="background-image: url('/img/photo/1.jpg'); "></div>
+                    </a>
+
+                </div>
+                <div style="display: none;">
+                    <a href="/img/photo/2.jpg" data-fancybox="first-album">
+                        <div class="img" style="background-image: url('/img/photo/2.jpg');"></div>
+                    </a>
+                    <a href="/img/photo/3.jpg" data-fancybox="first-album">
+                        <div class="img" style="background-image: url('/img/photo/3.jpg');"></div>
+                    </a>
+                </div>
+                <div class="album__grid-title">Rachel & Sam</div>
+                <div class="album__grid-date">October 18th, 2023</div>
+            </div>
+            <div class="album__grid-cel">
+                <div class="album__grid-img">
+                    <a href="/img/photo/4.jpg" data-fancybox="second-album">
+                        <div class="img" style="background-image: url('/img/photo/4.jpg'); "></div>
+                    </a>
+
+                </div>
+                <div style="display: none;">
+                    <a href="/img/photo/5.jpg" data-fancybox="second-album">
+                        <div class="img" style="background-image: url('/img/photo/5.jpg');"></div>
+                    </a>
+                    <a href="/img/photo/6.jpg" data-fancybox="second-album">
+                        <div class="img" style="background-image: url('/img/photo/6.jpg');"></div>
+                    </a>
+                </div>
+                <div class="album__grid-title">Lynn & Richard</div>
+                <div class="album__grid-date">October 18th, 2023</div>
+            </div>
+            <div class="album__grid-cel">
+                <div class="album__grid-img">
+                    <a href="/img/photo/13.jpg" data-fancybox="third-album">
+                        <div class="img" style="background-image: url('/img/photo/13.jpg'); "></div>
+                    </a>
+
+                </div>
+                <div style="display: none;">
+                    <a href="/img/photo/14.jpg" data-fancybox="third-album">
+                        <div class="img" style="background-image: url('/img/photo/14.jpg');"></div>
+                    </a>
+                    <a href="/img/photo/15.jpg" data-fancybox="third-album">
+                        <div class="img" style="background-image: url('/img/photo/15.jpg');"></div>
+                    </a>
+                </div>
+                <div class="album__grid-title">Joshua & Ashley</div>
+                <div class="album__grid-date">October 18th, 2023</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div id="up"></div>
+        <div class="text to-top">
+            Back to Top
+        </div>
+        <div class="copyright">
+            2018 by Sherlock Holms
+        </div>
+    </div>
+</footer>
+
+<div style="display: none;" class="soc">
+    <ul>
+        <a href="#">
+            <li class="soc__icon"><i class="fab fa-facebook-f"></i></li>
+        </a>
+        <a href="#">
+            <li class="soc__icon"><i class="fab fa-twitter"></i></li>
+        </a>
+        <a href="#">
+            <li class="soc__icon"><i class="fab fa-pinterest-p"></i></li>
+        </a>
+        <a href="#">
+            <li class="soc__icon"><i class="fab fa-instagram"></i></li>
+        </a>
+    </ul>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script>
+    $(function () {
+
+
+        $('.menu__main').slicknav({
+            prependTo: '#mobile',
+            label: 'MENU'
+        });
+        var $page = $('html, body');
+        $("#up, .to-top").click(function () {
+            $page.animate({scrollTop: 0}, 1500)
+        });
+
+        $('a[href*="#"]').click(function () {
+            $page.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 400);
+            return false;
+        });
+    });
+
+
+</script>
+</body>
+</html>
