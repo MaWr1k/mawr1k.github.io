@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WIX</title>
-   
+
     <link rel="stylesheet" href="css/style.css?v1">
     <link rel="stylesheet" href="css/grid.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -16,24 +16,18 @@
 </head>
 <body>
 <header>
+    <div class="soc">
+        <ul>
+
+            <li class="soc__icon"><a href="https://www.facebook.com/mike.shkalev" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="soc__icon"><a href="https://www.instagram.com/ShkalevMike/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+
+        </ul>
+    </div>
     <div id="mobile"></div>
+
     <div class="container">
-        <div class="soc">
-            <ul>
-                <a href="#">
-                    <li class="soc__icon"><i class="fab fa-facebook-f"></i></li>
-                </a>
-                <a href="#">
-                    <li class="soc__icon"><i class="fab fa-twitter"></i></li>
-                </a>
-                <a href="#">
-                    <li class="soc__icon"><i class="fab fa-pinterest-p"></i></li>
-                </a>
-                <a href="#">
-                    <li class="soc__icon"><i class="fab fa-instagram"></i></li>
-                </a>
-            </ul>
-        </div>
+
         <ul class="menu__main">
             <li><a href="index.html" class="menu__main-link active">Home</a></li>
             <li><a href="#about" class="menu__main-link">About</a></li>
@@ -126,10 +120,13 @@
             <div class="contact__info">
                 <h3>I am Based in Belgium</h3>
                 <p><span class="contact__info-width">GSM: </span><a href="tel:+32465549925"></a>+32465549925</p>
-                <p><span class="contact__info-width">EMAIL: </span><a href="mailto:shkalev1991@gmail.com">Shkalev1991@gmail.com</a></p>
+                <p><span class="contact__info-width">EMAIL: </span><a href="mailto:shkalev1991@gmail.com">Shkalev1991@gmail.com</a>
+                </p>
                 <p><span class="contact__info-width">SKYPE: </span>Shkalev1991</p>
-                <p><span class="contact__info-width">Instagram: </span><a href="https://www.instagram.com/ShkalevMike/">ShkalevMike</a></p>
-                <p><span class="contact__info-width">Facebook: </span><a href="https://www.facebook.com/mike.shkalev">Mike Shkalev</a></p>
+                <p><span class="contact__info-width">Instagram: </span><a href="https://www.instagram.com/ShkalevMike/">ShkalevMike</a>
+                </p>
+                <p><span class="contact__info-width">Facebook: </span><a href="https://www.facebook.com/mike.shkalev">Mike
+                    Shkalev</a></p>
             </div>
             <div class="contact__form">
                 <form action="" method="post">
@@ -154,71 +151,15 @@
             Back to Top
         </div>
         <div class="copyright">
-            2018 by Sherlock Holms
+            2018 by Sherlock Holmes
         </div>
     </div>
 </footer>
-
-<div class="soc">
-    <ul>
-        <a href="#">
-            <li class="soc__icon"><i class="fab fa-facebook-f"></i></li>
-        </a>
-        <a href="#">
-            <li class="soc__icon"><i class="fab fa-twitter"></i></li>
-        </a>
-        <a href="#">
-            <li class="soc__icon"><i class="fab fa-pinterest-p"></i></li>
-        </a>
-        <a href="#">
-            <li class="soc__icon"><i class="fab fa-instagram"></i></li>
-        </a>
-    </ul>
-</div>
-
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.slicknav.min.js"></script>
 <script src="js/sweetalert.min.js"></script>
-<script>
-    $(function () {
-        $(".contact__form .button").on('click', function(){
-            event.preventDefault();
-            var msg = $('.contact__form form').serialize();
-
-            $.ajax({
-                type: 'POST',
-                url: 'send.php',
-                data: msg,
-                success: function(data) {
-                    /*$('#results').html(data);*/
-                    swal(data);
-                },
-                error:  function(xhr, str){
-                    swal('Error: ' + xhr.responseCode);
-                }
-            });
-        });
-
-        $('.menu__main').slicknav({
-            prependTo: '#mobile',
-            label: 'MENU'
-        });
-        var $page = $('html, body');
-        $("#up, .to-top").click(function () {
-            $page.animate({scrollTop: 0}, 1500)
-        });
-
-        $('a[href*="#"]').click(function () {
-            $page.animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 400);
-            return false;
-        });
-    });
-
-
-</script>
+<script src="js/common.js"></script>
 </body>
 </html>
