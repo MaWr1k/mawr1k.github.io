@@ -11,31 +11,72 @@
 <body>
 <header>
     <div class="container">
-        <div class="logo"><img src="images/logo.png" alt=""></div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Описание</a></li>
-                <li><a href="#">Характеристики</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Купить</a></li>
-            </ul>
+        <div class="row">
+            <div class="logo col-xl-6 col-lg-5 col-md-12 col-12"><img src="images/logo.png" alt=""></div>
+            <div class="menu col-xl-6 col-lg-7 col-md-12 col-12">
+                <ul>
+                    <li><a href="#">Описание</a></li>
+                    <li><a href="#">Характеристики</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Купить</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
 <section class="slider">
     <div class="container">
-        <div class="slider__info">
-            <h2 class="title">Робот пылесос <br> Karcher RC 4000</h2>
-            <div class="text-block">Karcher RC 4.000 справляется с уборкой в отсутствие хозяев б у, что операции чистки, сбора мусора и восстановления заряда аккумулятора в этом аппарате полностью автоматизированы.</div>
-            <div class="button button-space">Купить</div>
-            <div class="button button-transparent">Подробнее</div>
-        </div>
-        <div class="slider__img">
-            <img src="images/slide1.jpg" alt="">
-        </div>
+        <div class="row">
+            <div class="slider__info col-xl-6 col-lg-6 col-md-6 col-12">
+                <h2 class="title">Робот пылесос <br> Karcher RC 4000</h2>
+                <div class="text-block">Karcher RC 4.000 справляется с уборкой в отсутствие хозяев б у, что операции
+                    чистки, сбора мусора и восстановления заряда аккумулятора в этом аппарате полностью
+                    автоматизированы.
+                </div>
+                <!--<div class="buttons">-->
+                    <div class="button button-space">Купить</div>
+                    <div class="button button-transparent">Подробнее</div>
+                <!--</div>-->
 
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                <div class="slider__img"></div>
+                <!--<img src="images/slide1.jpg" alt="">-->
+            </div>
+        </div>
         <div class="next-block"></div>
     </div>
 </section>
+
+<section class="advantage">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                <div class="title">Автоматическая очиста и зарядка</div>
+                <div class="text-block">
+                    Karcher RC 4.000 занимается уборкой абсолютно самостоятельно. Специальные технологии позволяют ему автоматически выбирать необходимую интенсивность очистки, преодолевать препятствия и даже обходить лестницы. Он исключительно надежен и всегда сам возвращается к базовой станции для разгрузки собранного мусора и восстановления заряда аккумуляторов – разумеется, и эти операции полностью автоматизированы.
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                <div class="advantage__detail">
+                    <div class="advantage__img advantage__img1"></div>
+                    <div class="advantage__container-text">
+                        <div class="advantage__title">Производительность</div>
+                        <div class="advantage__text text-block">Робот-пылесос обеспечивает качественную сухую уборку в квартире со скоростью 15 квадратных метров в час</div>
+                    </div>
+                </div>
+                <div class="advantage__detail">
+                    <div class="advantage__img advantage__img2"></div>
+                    <div class="advantage__container-text">
+                        <div class="advantage__title">Четыре режима работы</div>
+                        <div class="advantage__text text-block">Вы можете выбрать один из четырёх режимов: обычную уборку, быструю, хаотичную или ночную.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="height: 100vh;"></section>
 </body>
 </html>
