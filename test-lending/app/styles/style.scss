@@ -1,5 +1,8 @@
 @import 'fonts';
 @import 'grid.min';
+$first-color:#292929;
+$second-color:#9e9e9e;
+$emphasis:#ffc80a;
 body, p, ul, h1, h2, h3 {
   padding: 0;
   margin: 0;
@@ -20,6 +23,9 @@ header {
     display: flex;
     justify-content: space-between;
   }
+  .logo{
+    padding-left: 5%;
+  }
   .menu {
 
     ul {
@@ -31,7 +37,7 @@ header {
         line-height: 19px;
         a {
           font-family: "Roboto";
-          color: #9e9e9e;
+          color: $second-color;
           font-size: 12px;
           font-weight: 700;
           text-decoration: none;
@@ -49,19 +55,78 @@ header {
   }
 }
 
+
+.title{
+  font-family: 'Arvo';
+  font-size: 36px;
+  color:$first-color;
+  line-height: 46px;
+  margin-bottom: 35px;
+}
+
+.text-block{
+  color:$second-color;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button{
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: Roboto;
+  width: 170px;
+  background-color: $emphasis;
+  color:$first-color;
+  border:2px solid $emphasis;
+  border-radius: 1190px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 3px;
+
+}
+.button-transparent{
+  background-color: #fff;
+  border: 2px solid #f6f6f6;
+}
+
+.button:hover{
+  background-color: #fff;
+  border: 2px solid #f6f6f6;
+}
+.button-transparent:hover{
+  background-color: $emphasis;
+  border: 2px solid $emphasis;
+}
+
+.next-block{
+  background-image: url("../images/mouse.png");
+  width:32px;
+  height:72px;
+  cursor:pointer;
+  margin: 0 auto;
+}
 .slider{
   padding-top: 150px;
   .container{
     display: flex;
+    flex-wrap: wrap;
   }
-  &__title{
-    font-family: 'Arvo';
-
+  .button-space{
+    margin-right: 20px;
   }
   &__info{
     width: 50%;
+    padding-left: 5%;
+    padding-right: 10%;
   }
   &__img{
     width: 50%;
   }
+  .text-block{
+    margin-bottom: 45px;
+  }
 }
+
