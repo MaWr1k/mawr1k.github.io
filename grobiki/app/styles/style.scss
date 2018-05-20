@@ -7,6 +7,10 @@ section, header {
   border-bottom: none;
 }
 
+header {
+  padding-bottom: 0;
+}
+
 nav.navbar {
   box-shadow: none;
   margin-top: 40px;
@@ -33,7 +37,7 @@ nav.navbar {
 }
 
 .cloud {
-  background-image: url(../img/cloud.png);
+  background-image: url(../img/cloudd.png);
   -ms-background-position-x: center;
   background-position-x: center;
   -webkit-background-size: cover;
@@ -77,8 +81,11 @@ nav.navbar {
     padding-top: 50px;
   }
   .desc {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 28px;
     color: #616161;
+    padding-left: 50px;
+    padding-top: 20px;
     p {
       padding-top: 30px;
     }
@@ -99,6 +106,15 @@ nav.navbar {
 
 #benefits-line {
   color: #616161;
+  .list-benefits{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .item-benefit{
+      width: 33%;
+    }
+  }
+
   li {
     padding: 0;
     display: flex;
@@ -119,10 +135,11 @@ nav.navbar {
     font-size: 24px;
     font-family: "Lato";
     font-weight: bold;
+    margin-bottom: 0;
   }
   .benefits-desc {
     font-size: 18px;
-    line-height: 32px;
+    line-height: 24px;
   }
 }
 
@@ -130,7 +147,8 @@ nav.navbar {
   background-image: url("../img/bg-portfolio.png");
   -webkit-background-size: cover;
   background-size: cover;
-  
+  min-height:700px;
+
   .all-portfolio {
     .portfolio-list {
       display: none;
@@ -182,10 +200,10 @@ nav.navbar {
   .item {
     padding: 25px;
     margin: 30px;
-    max-width:40%;
-    border:1px solid #bdbdbd;
+    max-width: 40%;
+    border: 1px solid #bdbdbd;
     transition-duration: 0.4s;
-
+    background-color: #fff;
     img {
       width: 100%;
       height: 100%;
@@ -193,11 +211,12 @@ nav.navbar {
       object-fit: contain;
     }
   }
-  .item:hover{
-    border:1px solid #00b0d7;
-    box-shadow:  0 0 44px 3px rgba(0, 0, 0, 0.2);
+  .item:hover {
+    border: 1px solid #00b0d7;
+    box-shadow: 0 0 44px 3px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
-}
+
+  }
   .portfolio-list .portfolio-wrapper {
     display: flex;
     justify-content: center;
@@ -244,7 +263,7 @@ nav.navbar {
     border-bottom: 1px solid white;
     color: white;
   }
-  input.form-control{
+  input.form-control {
     padding-bottom: 10px;
     padding-top: 10px;
   }
@@ -300,56 +319,98 @@ footer {
   color: white;
   font-size: 16px;
   line-height: 80px;
+  font-weight: 100;
+  .editContent {
+    a {
+      font-weight: 400;
+    }
+  }
 }
 
-@media screen and (max-width: 610px) {
-  .portfolio .item{
-    max-width:90%;
+#cloud-parallax {
+  .big-cloud {
+    margin-left: -399px;
+    margin-bottom: -20px;
   }
-  #benefits-line li{
-    flex-wrap: wrap;
+  .first-cloud {
+    margin-top: 100px;
   }
-  #benefits-line img{
-    w
+  .second-cloud {
+    margin-top: 110px;
+    img {
+      margin-left: 130%;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .portfolio {
+    .item {
+      //width:320px;
+    }
   }
 }
 @media screen and (max-width: 992px) {
+  nav.navbar .container {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
   .form button {
     margin: 0 auto;
   }
   .navbar.footer-menu {
-    .navbar-brand{
+    .navbar-brand {
       float: none;
     }
-    .nav{
+    .nav {
       display: flex;
       justify-content: center;
     }
-    .row [class^=col-]{
+    .row [class^=col-] {
       padding-bottom: 10px;
     }
   }
-  .portfolio{
-    .cat{
+  .portfolio {
+    .cat {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      li{
-        width:33%;
+      li {
+        width: 33%;
       }
-      a{
-
+      a {
         padding-right: 40px;
       }
     }
   }
-
-}
-@media screen and (max-width:1200px){
-.portfolio{
-  .item{
-    //width:320px;
+  #benefits-line{
+    .list-benefits{
+      .item-benefit{
+        width: 75%;
+      }
+    }
+  }
+  .about {
+    .desc{
+      padding-left: 0;
+    }
+  }
+  .line{
+    left: -1000px;
+  }
+  .about-photo{
+    width: 290px;
+    height: 290px;
   }
 }
-
+@media screen and (max-width: 610px) {
+  .portfolio .item {
+    max-width: 90%;
+  }
+  #benefits-line li {
+    flex-wrap: wrap;
+  }
+  #benefits-line .list-benefits .item-benefit{
+    width: 95%;
+  }
 }
