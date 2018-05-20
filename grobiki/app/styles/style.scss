@@ -71,7 +71,7 @@ nav.navbar {
   background-image: url("../img/bg-about.jpg");
   -webkit-background-size: cover;
   background-size: cover;
-  padding-bottom: 350px;
+  padding-bottom: 250px;
   h2 {
     color: #363636;
     font-size: 32px;
@@ -167,20 +167,21 @@ nav.navbar {
   }
   .cat {
     margin-top: 60px;
-    a {
+    li {
       overflow: hidden;
       display: inline-block;
       padding: 5px;
       width: 100%;
       transition-duration: 0.4s;
       position: relative;
+      cursor:pointer;
     }
-    a:hover {
+    li:hover {
       padding-left: 25px;
       color: #00b0d7;
       font-weight: 400;
     }
-    a:before {
+    li:before {
       content: '→';
       color: black;
       position: absolute;
@@ -193,7 +194,7 @@ nav.navbar {
       height: 5px;
 
     }
-    a:hover:before {
+    li:hover:before {
       left: 5px;
     }
   }
@@ -258,7 +259,9 @@ nav.navbar {
   .half:nth-child(2) {
     margin-left: 2%;
   }
-
+  #contact_submit{
+    margin-top: 20px;
+  }
   .form-group {
     border-bottom: 1px solid white;
     color: white;
@@ -371,6 +374,7 @@ footer {
     }
   }
   .portfolio {
+    padding-top: 10px;
     .cat {
       display: flex;
       justify-content: center;
@@ -389,6 +393,9 @@ footer {
         width: 75%;
       }
     }
+    li{
+      margin-bottom: 30px;
+    }
   }
   .about {
     .desc{
@@ -398,9 +405,17 @@ footer {
   .line{
     left: -1000px;
   }
+  .about{
+    padding-bottom:300px;
+  }
   .about-photo{
     width: 290px;
     height: 290px;
+  }
+  footer{
+    .row [class^=col-]{
+      padding-bottom: 10px;
+    }
   }
 }
 @media screen and (max-width: 610px) {
@@ -409,8 +424,38 @@ footer {
   }
   #benefits-line li {
     flex-wrap: wrap;
+
+    .img,
+    .info{
+      width: 100%;
+    }
+    .list-benefits .item-benefit{
+      width: 95%;
+    }
   }
-  #benefits-line .list-benefits .item-benefit{
-    width: 95%;
+  .about{
+    padding-bottom: 400px;
+    .cloud{
+      -ms-background-position-y: 100px;
+      background-position-y: 100px;
+    }
+  }
+  .form {
+    .half{
+      width: 100%;
+    }
+    .half:nth-child(2){
+      margin-left: 0;
+    }
+    #contact_submit{
+      margin-top: 20px;
+    }
+  }
+  nav.footer-menu .container{
+    width: 100%;
+    margin: 0 auto;
+    .nav{
+      flex-wrap: wrap;
+    }
   }
 }
