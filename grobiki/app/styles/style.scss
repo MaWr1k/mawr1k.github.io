@@ -1,3 +1,8 @@
+@import "fonts";
+
+//$emphasis: #ffb400;
+$emphasis: #d81300;
+
 body {
   font-family: Roboto;
   font-weight: normal;
@@ -28,12 +33,32 @@ nav.navbar {
 .intro-block {
   h1 {
     font-family: "Lato Black";
+    line-height: 1;
   }
   .desc {
     font-family: "Roboto Light";
     color: white;
-    font-size: 24pt;
+    font-size: 24px;
+    line-height: 1.2;
   }
+}
+
+.button-bc {
+  background-color: $emphasis;
+  line-height: 80px;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  width: 400px;
+  border-radius: 50px;
+  border: 2px solid $emphasis;
+  cursor: pointer;
+}
+
+.button-bc:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .cloud {
@@ -89,8 +114,73 @@ nav.navbar {
     p {
       padding-top: 30px;
     }
-
   }
+}
+
+section.sale {
+  h2 {
+    font-size: 42px;
+    line-height: 46px;
+    font-family: "Lato Black";
+    font-weight: bold;
+  }
+  .sale-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .arrow {
+    position: absolute;
+    right: 280px;
+    animation: my_action .3s ease infinite alternate;
+  }
+  .sale-arrow-block {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .sale-button {
+    background-color: $emphasis;
+    border-radius: 50px;
+    padding: 0 40px;
+    line-height: 60px;
+    color: white;
+    cursor: pointer;
+  }
+  .desc{
+    strong{
+      font-size: 130%;
+      font-family: "Lato Black";
+    }
+  }
+}
+
+@keyframes my_action {
+  100% {
+    right: 250px;
+  }
+}
+
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  .ad-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+.adv-item{
+  width:33%;
+  display: flex;
+  align-items: center;
+  .item-title{
+    font-size: 18px;
+  }
+}
+.item-img{
+  width: 70px;
+  margin-right: 10px;
 }
 
 .line {
@@ -101,25 +191,35 @@ nav.navbar {
 }
 
 #benefits-line.half-padding {
-  padding-top: 50px;
+  padding-top: 00px;
 }
 
 #benefits-line {
   color: #616161;
-  .list-benefits{
+  h2{
+    color: #363636;
+    font-size: 32px;
+    font-weight: bold;
+    width:100%;
+    text-align: center;
+  }
+  .list-benefits {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    .item-benefit{
-      width: 33%;
+    .item-benefit {
+      width: 25%;
+      padding: 0;
+      display: flex;
+      padding-bottom: 45px;
+      align-items: center;
+      padding-right: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
     }
   }
 
-  li {
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
   .img {
     padding-right: 10px;
     img {
@@ -147,7 +247,8 @@ nav.navbar {
   background-image: url("../img/bg-portfolio.png");
   -webkit-background-size: cover;
   background-size: cover;
-  min-height:700px;
+  min-height: 700px;
+  padding-top: 50px;
 
   .all-portfolio {
     .portfolio-list {
@@ -174,7 +275,10 @@ nav.navbar {
       width: 100%;
       transition-duration: 0.4s;
       position: relative;
-      cursor:pointer;
+      cursor: pointer;
+    }
+    li:first-letter {
+      text-transform: uppercase;
     }
     li:hover {
       padding-left: 25px;
@@ -203,7 +307,7 @@ nav.navbar {
     margin: 30px;
     max-width: 40%;
     border: 1px solid #bdbdbd;
-    transition-duration: 0.4s;
+    //transition: transform 0.4s linear;
     background-color: #fff;
     img {
       width: 100%;
@@ -212,10 +316,11 @@ nav.navbar {
       object-fit: contain;
     }
   }
+
   .item:hover {
     border: 1px solid #00b0d7;
     box-shadow: 0 0 44px 3px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+    //transform: scale(1.05);
 
   }
   .portfolio-list .portfolio-wrapper {
@@ -259,7 +364,7 @@ nav.navbar {
   .half:nth-child(2) {
     margin-left: 2%;
   }
-  #contact_submit{
+  #contact_submit {
     margin-top: 20px;
   }
   .form-group {
@@ -286,7 +391,7 @@ nav.navbar {
     color: white;
   }
   button {
-    width: 160px;
+    //width: 160px;
     margin-top: 20px;
   }
 }
@@ -330,6 +435,32 @@ footer {
   }
 }
 
+.modal-dialog {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  .modal-content {
+    padding: 20px 20px;
+    .close {
+      right: -14px;
+    }
+  }
+  .modal-body {
+    padding: 0;
+  }
+
+}
+
+.button-map {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
+
+.button-map:hover {
+  color: #cce5ff;
+}
+
 #cloud-parallax {
   .big-cloud {
     margin-left: -399px;
@@ -345,6 +476,7 @@ footer {
     }
   }
 }
+
 @media screen and (max-width: 1200px) {
   .portfolio {
     .item {
@@ -352,7 +484,11 @@ footer {
     }
   }
 }
+
 @media screen and (max-width: 992px) {
+  header{
+    padding-top: 150px;
+  }
   nav.navbar .container {
     margin-left: 5%;
     margin-right: 5%;
@@ -387,37 +523,38 @@ footer {
       }
     }
   }
-  #benefits-line{
-    .list-benefits{
-      .item-benefit{
+  #benefits-line {
+    .list-benefits {
+      .item-benefit {
         width: 75%;
       }
     }
-    li{
+    li {
       margin-bottom: 30px;
     }
   }
   .about {
-    .desc{
+    .desc {
       padding-left: 0;
     }
   }
-  .line{
+  .line {
     left: -1000px;
   }
-  .about{
-    padding-bottom:300px;
+  .about {
+    padding-bottom: 300px;
   }
-  .about-photo{
+  .about-photo {
     width: 290px;
     height: 290px;
   }
-  footer{
-    .row [class^=col-]{
+  footer {
+    .row [class^=col-] {
       padding-bottom: 10px;
     }
   }
 }
+
 @media screen and (max-width: 610px) {
   .portfolio .item {
     max-width: 90%;
@@ -426,35 +563,35 @@ footer {
     flex-wrap: wrap;
 
     .img,
-    .info{
+    .info {
       width: 100%;
     }
-    .list-benefits .item-benefit{
+    .list-benefits .item-benefit {
       width: 95%;
     }
   }
-  .about{
+  .about {
     padding-bottom: 400px;
-    .cloud{
+    .cloud {
       -ms-background-position-y: 100px;
       background-position-y: 100px;
     }
   }
   .form {
-    .half{
+    .half {
       width: 100%;
     }
-    .half:nth-child(2){
+    .half:nth-child(2) {
       margin-left: 0;
     }
-    #contact_submit{
+    #contact_submit {
       margin-top: 20px;
     }
   }
-  nav.footer-menu .container{
+  nav.footer-menu .container {
     width: 100%;
     margin: 0 auto;
-    .nav{
+    .nav {
       flex-wrap: wrap;
     }
   }
