@@ -1,0 +1,290 @@
+@use "variables" as *;
+
+@font-face {
+  font-family: 'KyivSans';
+  src: url('../fonts/TTF/KyivTypeSans-Regular.ttf') format('truetype'),
+  url('../fonts/OTF/KyivTypeSans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KyivSans';
+  src: url('../fonts/TTF/KyivTypeSans-Bold.ttf') format('truetype'),
+  url('../fonts/OTF/KyivTypeSans-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KyivSans';
+  src: url('../fonts/TTF/KyivTypeSans-Light.ttf') format('truetype'),
+  url('../fonts/OTF/KyivTypeSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/Manrope-Bold.woff2') format('woff2'),
+          url('../fonts/Manrope/Manrope-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
+  url('../fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/Manrope-SemiBold.woff2') format('woff2'),
+  url('../fonts/Manrope/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: 991px) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1400px
+  }
+}
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px
+  }
+}
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1300px
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  //background-color: #ffaf4b;
+  color:$color-gray;
+  font-family: KyivSans;
+}
+
+a{
+  text-decoration: none;
+}
+.basic-buttons{
+ padding: 20px;
+}
+.img{
+  line-height: 0;
+  img{
+    width: 100%;
+  }
+}
+.texth1{
+  font-size: 50px;
+  line-height: 1;
+  @media screen and (max-width: 1399px) {
+    font-size: 44px;
+  }
+}
+.texth2{}
+.text18{
+  font-size: 18px;
+  line-height: 1.2;
+  @media screen and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+.text20{
+  font-size:30px;
+  line-height: 1.4;
+  @media screen and (max-width: 1399px) {
+    font-size: 26px;
+  }
+}
+
+
+
+
+
+
+
+.color-btn-icon{
+  display: flex;
+  align-items: center;
+  color: $emphasis-color;
+  cursor: pointer;
+  font-size: 18px;
+  svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+.star-link{
+  display: flex;
+  align-items: center;
+  color:$emphasis-color;
+  font-size: 18px;
+  svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    path{
+      fill: $emphasis-color;
+    }
+  }
+}
+.circle-btn{
+  border-radius: 300px;
+  border: 1px solid $color-green;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.row-center{
+  justify-content: center;
+}
+.two-stars-btn{
+  color: $color-green;
+  cursor:pointer;
+  display: flex;
+  svg{
+    width: 20px;
+    height: 20px;
+    transition-duration: 0.3s;
+    position: relative;
+    path{
+      fill:$color-green;
+    }
+    &:first-child{
+      left: 0;
+    }
+    &:last-child{
+      right: 0;
+    }
+  }
+  span{
+    padding: 0 10px;
+  }
+  &:hover{
+    svg{
+      &:first-child{
+        left: -4px;
+      }
+      &:last-child{
+        right: -4px;
+      }
+
+    }
+  }
+}
+
+.star-with-bg{
+  border-radius: 40px;
+  padding: 20px;
+  background-color: $emphasis-color;
+  color: #F5F5F5;
+  font-size: 18px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    path{
+      fill: #F5F5F5;
+    }
+  }
+}
